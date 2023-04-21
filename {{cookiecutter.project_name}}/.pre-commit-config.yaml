@@ -1,73 +1,100 @@
+---
 repos:
-  - repo: local
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: debug-statements
+      - id: detect-aws-credentials
+        args: [ "--allow-missing-credentials" ]
+      - id: detect-private-key
+
+  - repo: https://github.com/pycqa/bandit
+    rev: 1.7.2
     hooks:
       - id: bandit
-        name: bandit
-        entry: bandit
-        language: system
-        types: [python]
-        require_serial: true
-        args: ["-c", "bandit.yml"]
-      - id: black
-        name: black
-        entry: black
-        language: system
-        types: [python]
-        require_serial: true
-      - id: check-added-large-files
-        name: Check for added large files
-        entry: check-added-large-files
-        language: system
-      - id: check-toml
-        name: Check Toml
-        entry: check-toml
-        language: system
-        types: [toml]
-      - id: check-yaml
-        name: Check Yaml
-        entry: check-yaml
-        language: system
-        types: [yaml]
-      - id: darglint
-        name: darglint
-        entry: darglint
-        language: system
-        types: [python]
-        stages: [manual]
-      - id: end-of-file-fixer
-        name: Fix End of Files
-        entry: end-of-file-fixer
-        language: system
-        types: [text]
-        stages: [commit, push, manual]
-      - id: flake8
-        name: flake8
-        entry: flake8
-        language: system
-        types: [python]
-        require_serial: true
-        args: [--darglint-ignore-regex, .*]
-      - id: isort
-        name: isort
-        entry: isort
-        require_serial: true
-        language: system
-        types_or: [cython, pyi, python]
-        args: ["--filter-files"]
-      - id: pyupgrade
-        name: pyupgrade
-        description: Automatically upgrade syntax for newer versions.
-        entry: pyupgrade
-        language: system
-        types: [python]
-        args: [--py37-plus]
-      - id: trailing-whitespace
-        name: Trim Trailing Whitespace
-        entry: trailing-whitespace-fixer
-        language: system
-        types: [text]
-        stages: [commit, push, manual]
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.6.0
+        args: [ "-c", "pyproject.toml", "--quiet", "src/" ]
+        # Needed if using pyproject.toml for config
+        additional_dependencies: [ "toml==0.10.2" ]
+        pass_filenames: false
+
+  # License heading
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.1
     hooks:
-      - id: prettier
+      - id: insert-license
+        files: \.pyi?$
+        args: [ "--license-filepath", ".license-header" ]
+
+  # Formatters that may modify source files automatically
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-case-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        args: [ "--profile", "black" ]
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.31.0
+    hooks:
+      - id: pyupgrade
+        args: [ "--py37-plus", "--keep-runtime-typing" ]
+
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+      - id: black
+  - repo: https://github.com/adamchainz/blacken-docs
+    rev: v1.12.1
+    hooks:
+      - id: blacken-docs
+        additional_dependencies: [ "black==23.3.0" ]
+
+  # Linters and validation
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-json
+      - id: check-yaml
+      - id: check-ast
+      - id: pretty-format-json
+        args:
+          [
+            "--autofix",
+            "--indent=4",
+            "--no-ensure-ascii",
+            "--no-sort-keys"
+          ]
+
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.9.0
+    hooks:
+      - id: python-check-blanket-noqa
+      - id: python-no-eval
+      - id: python-no-log-warn
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+      - id: flake8
+        args: [ "--output-file", "flake8-error-log.txt" ]
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    # Ruff version.
+    rev: "v0.0.261"
+    hooks:
+      - id: ruff
+        args: [ "--config", "pyproject.toml" ]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: "v1.2.0"
+    hooks:
+      - id: mypy
+        args: [ "--config-file", "pyproject.toml" ]

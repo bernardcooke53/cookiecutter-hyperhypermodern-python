@@ -1,8 +1,51 @@
 [flake8]
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    Include,
+    include,
+    Lib,
+    lib,
+    Scripts,
+    scripts,
+    *.pyc,
+    *venv,
+    *.egg-info,
+    .tox
+
+per-file-ignores =
+    # Imported but unused
+    */__init__.py: F401
+
 select = B,B9,C,D,DAR,E,F,N,RST,W
-ignore = E203,E501,RST201,RST203,RST301,W503
-max-line-length = 80
+ignore =
+    # Whitespace before ":" - see https://github.com/PyCQA/pycodestyle/issues/373
+    E203
+    # do not use bare except
+    E722
+    # line break after binary operator
+    W504
+    # line break before binary operator
+    W503
+    # Line too long
+    E501
+    # Block quote ends without a blank line; unexpected unindent.
+    RST201
+    # Definition list ends without a blank line; unexpected unindent.
+    RST203
+    # Unexpected indentation.
+    RST301
+
+
+count = True
 max-complexity = 10
-docstring-convention = google
+max-line-length = 88
+indent-size = 4
+show-source = True
+output-file = flake8-error-log.txt
+statistics = True
+tee = True
 rst-roles = class,const,func,meth,mod,ref
 rst-directives = deprecated

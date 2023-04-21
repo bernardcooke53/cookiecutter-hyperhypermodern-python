@@ -1,14 +1,14 @@
 ---
 myst:
   substitutions:
-    HPC: "*Hypermodern Python Cookiecutter*"
+    HPC: "*hyperhypermodern Python Cookiecutter*"
 ---
 
 # User Guide
 
 This is the user guide
-for the [Hypermodern Python Cookiecutter],
-a Python template based on the [Hypermodern Python] article series.
+for the [hyperhypermodern Python Cookiecutter],
+a Python template based on the [hyperhypermodern Python] article series.
 
 If you're in a hurry, check out the [quickstart guide](quickstart)
 and the [tutorials](tutorials).
@@ -19,7 +19,7 @@ and the [tutorials](tutorials).
 
 The {{ HPC }} is a general-purpose template for Python libraries and applications,
 released under the [MIT license]
-and hosted on [GitHub][hypermodern python cookiecutter].
+and hosted on [GitHub][hyperhypermodern python cookiecutter].
 
 The main objective of this project template is to
 enable current best practices
@@ -122,7 +122,7 @@ your system already has [bash] and [curl] installed.)
 Install [pyenv] like this:
 
 ```console
-$ curl https://pyenv.run | bash
+curl https://pyenv.run | bash
 ```
 
 Add the following lines to your `~/.bashrc`:
@@ -140,10 +140,10 @@ Install the latest point release of every supported Python version.
 This project template supports Python 3.7, 3.8, 3.9, and 3.10.
 
 ```console
-$ pyenv install 3.7.12
-$ pyenv install 3.8.12
-$ pyenv install 3.9.10
-$ pyenv install 3.10.2
+pyenv install 3.7.12
+pyenv install 3.8.12
+pyenv install 3.9.10
+pyenv install 3.10.2
 ```
 
 After creating your project (see [below](creating-a-project)),
@@ -151,7 +151,7 @@ you can make these Python versions accessible in the project directory,
 using the following command:
 
 ```console
-$ pyenv local 3.10.2 3.9.10 3.8.12 3.7.12
+pyenv local 3.10.2 3.9.10 3.8.12 3.7.12
 ```
 
 The first version listed is the one used when you type plain `python`.
@@ -179,28 +179,28 @@ You need four tools to use this template:
 Install [Cookiecutter] using pipx:
 
 ```console
-$ pipx install cookiecutter
+pipx install cookiecutter
 ```
 
 Install [Poetry] by downloading and running [install-poetry.py]:
 
 ```console
-$ python install-poetry.py
+python install-poetry.py
 ```
 
 Install [Nox] and [nox-poetry] using pipx:
 
 ```console
-$ pipx install nox
-$ pipx inject nox nox-poetry
+pipx install nox
+pipx inject nox nox-poetry
 ```
 
 Remember to upgrade these tools regularly:
 
 ```console
-$ pipx upgrade cookiecutter
-$ pipx upgrade --include-injected nox
-$ poetry self update
+pipx upgrade cookiecutter
+pipx upgrade --include-injected nox
+poetry self update
 ```
 
 ## Project creation
@@ -210,11 +210,11 @@ $ poetry self update
 ### Creating a project
 
 Create a project from this template
-by pointing Cookiecutter to its [GitHub repository][hypermodern python cookiecutter].
+by pointing Cookiecutter to its [GitHub repository][hyperhypermodern python cookiecutter].
 Use the `--checkout` option with the [current stable release][2022.6.3]:
 
 ```console
-$ cookiecutter gh:cjolowicz/cookiecutter-hypermodern-python --checkout="2022.6.3"
+cookiecutter gh:bernardcooke53/cookiecutter-hyperhyperhypermodern-python --checkout="2022.6.3"
 ```
 
 Cookiecutter downloads the template,
@@ -231,38 +231,38 @@ Here is a complete list of the project variables defined by this template:
 :widths: auto
 
 - - Variable
-  - Description
-  - Example
+- Description
+- Example
 - - `project_name`
-  - Project name on PyPI and GitHub
-  - `hypermodern-python`
+- Project name on PyPI and GitHub
+- `hyperhypermodern-python`
 - - `package_name`
-  - Import name of the package
-  - `hypermodern_python`
+- Import name of the package
+- `hyperhypermodern_python`
 - - `friendly_name`
-  - Friendly project name
-  - `Hypermodern Python`
+- Friendly project name
+- `hyperhypermodern Python`
 - - `author`
-  - Primary author
-  - Katherine Johnson
+- Primary author
+- Katherine Johnson
 - - `email`
-  - E-mail address of the author
-  - katherine@example.com
+- E-mail address of the author
+- katherine@example.com
 - - `github_user`
-  - GitHub username of the author
-  - `katherine`
+- GitHub username of the author
+- `katherine`
 - - `version`
-  - Initial project version
-  - `0.0.0`
+- Initial project version
+- `0.0.0`
 - - `copyright_year`
-  - The project copyright year
-  - `2022`
+- The project copyright year
+- `2022`
 - - `license`
-  - The project license
-  - `MIT`
+- The project license
+- `MIT`
 - - `development_status`
-  - Development status of the project
-  - `Development Status :: 3 - Alpha`
+- Development status of the project
+- `Development Status :: 3 - Alpha`
 
 :::
 
@@ -298,17 +298,17 @@ In the commands below,
 replace `<project>` by the name of your project.
 
 ```console
-$ cd <project>
-$ git init
-$ git add .
-$ git commit
+cd <project>
+git init
+git add .
+git commit
 ```
 
 Use the following command to ensure your default branch is called `main`,
 which is the [default branch name for GitHub repositories][github renaming].
 
 ```console
-$ git branch --move --force main
+git branch --move --force main
 ```
 
 Create an empty repository on [GitHub],
@@ -324,8 +324,8 @@ In the commands below, replace `<username>` by your GitHub username,
 and `<project>` by the name of your project.
 
 ```console
-$ git remote add origin git@github.com:<username>/<project>.git
-$ git push --set-upstream origin main
+git remote add origin git@github.com:<username>/<project>.git
+git push --set-upstream origin main
 ```
 
 Now may be a good time to set up Continuous Integration for your repository.
@@ -344,13 +344,13 @@ Let's start with the directory layout:
 :widths: auto
 
 - - `src/<package>`
-  - Python package
+- Python package
 - - `tests`
-  - Test suite
+- Test suite
 - - `docs`
-  - Documentation
+- Documentation
 - - `.github/workflows`
-  - GitHub Actions workflows
+- GitHub Actions workflows
 
 :::
 
@@ -361,11 +361,11 @@ For more details on these files, refer to the section [The initial package](the-
 :widths: auto
 
 - - `src/<project>/py.typed`
-  - Marker file for [PEP 561][pep 561]
+- Marker file for [PEP 561][pep 561]
 - - `src/<project>/__init__.py`
-  - Package initialization
+- Package initialization
 - - `src/<project>/__main__.py`
-  - Command-line interface
+- Command-line interface
 
 :::
 
@@ -376,9 +376,9 @@ For more details on these files, refer to the section [The test suite](the-test-
 :widths: auto
 
 - - `tests/__init__.py`
-  - Test package initialization
+- Test package initialization
 - - `tests/test_main.py`
-  - Test cases for `__main__`
+- Test cases for `__main__`
 
 :::
 
@@ -389,13 +389,13 @@ The documentation files in the top-level directory are rendered on [GitHub]:
 :widths: auto
 
 - - `README.md`
-  - Project description for GitHub and PyPI
+- Project description for GitHub and PyPI
 - - `CONTRIBUTING.md`
-  - Contributor Guide
+- Contributor Guide
 - - `CODE_OF_CONDUCT.md`
-  - Code of Conduct
+- Code of Conduct
 - - `LICENSE`
-  - License
+- License
 
 :::
 
@@ -407,17 +407,17 @@ The Sphinx documentation is hosted on [Read the Docs](read-the-docs-integration)
 :widths: auto
 
 - - `index.md`
-  - Main document
+- Main document
 - - `contributing.md`
-  - Contributor Guide (via include)
+- Contributor Guide (via include)
 - - `codeofconduct.md`
-  - Code of Conduct (via include)
+- Code of Conduct (via include)
 - - `license.md`
-  - License (via include)
+- License (via include)
 - - `reference.md`
-  - API reference
+- API reference
 - - `usage.md`
-  - Command-line reference
+- Command-line reference
 
 :::
 
@@ -427,11 +427,11 @@ The `.github/workflows` directory contains the [GitHub Actions workflows](github
 :widths: auto
 
 - - `release.yml`
-  - [The Release workflow](the-release-workflow)
+- [The Release workflow](the-release-workflow)
 - - `tests.yml`
-  - [The Tests workflow](the-tests-workflow)
+- [The Tests workflow](the-tests-workflow)
 - - `labeler.yml`
-  - [The Labeler workflow](the-labeler-workflow)
+- [The Labeler workflow](the-labeler-workflow)
 
 :::
 
@@ -444,36 +444,36 @@ and links each file to a section with more details.
 :widths: auto
 
 - - `.cookiecutter.json`
-  - [Project variables](creating-a-project)
+- [Project variables](creating-a-project)
 - - `.darglint`
-  - Configuration for [darglint](darglint-integration)
+- Configuration for [darglint](darglint-integration)
 - - `.github/dependabot.yml`
-  - Configuration for [Dependabot](dependabot-integration)
+- Configuration for [Dependabot](dependabot-integration)
 - - `.flake8`
-  - Configuration for [Flake8](the-flake8-hook)
+- Configuration for [Flake8](the-flake8-hook)
 - - `.gitattributes`
-  - [Git attributes][.gitattributes]
+- [Git attributes][.gitattributes]
 - - `.gitignore`
-  - [Git ignore file][.gitignore]
+- [Git ignore file][.gitignore]
 - - `.github/release-drafter.yml`
-  - Configuration for [Release Drafter](the-release-workflow)
+- Configuration for [Release Drafter](the-release-workflow)
 - - `.github/labels.yml`
-  - Configuration for [GitHub Labeler](the-labeler-workflow)
+- Configuration for [GitHub Labeler](the-labeler-workflow)
 - - `.pre-commit-config.yaml`
-  - Configuration for [pre-commit](linting-with-pre-commit)
+- Configuration for [pre-commit](linting-with-pre-commit)
 - - `.readthedocs.yml`
-  - Configuration for [Read the Docs](read-the-docs-integration)
+- Configuration for [Read the Docs](read-the-docs-integration)
 - - `codecov.yml`
-  - Configuration for [Codecov](codecov-integration)
+- Configuration for [Codecov](codecov-integration)
 - - `docs/conf.py`
-  - Configuration for [Sphinx](documentation)
+- Configuration for [Sphinx](documentation)
 - - `noxfile.py`
-  - Configuration for [Nox](using-nox)
+- Configuration for [Nox](using-nox)
 - - `pyproject.toml`
-  - Configuration for [Poetry](using-poetry),
-    [Coverage.py](the-coverage-session),
-    [isort](the-isort-hook),
-    and [mypy](type-checking-with-mypy)
+- Configuration for [Poetry](using-poetry),
+  [Coverage.py](the-coverage-session),
+  [isort](the-isort-hook),
+  and [mypy](type-checking-with-mypy)
 
 :::
 
@@ -488,11 +488,11 @@ Follow the links for more details on these.
 :widths: auto
 
 - - `poetry.lock`
-  - [Poetry lock file](the-lock-file)
+- [Poetry lock file](the-lock-file)
 - - `docs/requirements.txt`
-  - Requirements file for [Read the Docs](read-the-docs-integration)
+- Requirements file for [Read the Docs](read-the-docs-integration)
 - - `.github/workflows/constraints.txt`
-  - Constraints file for [GitHub Actions workflows](workflow-constraints)
+- Constraints file for [GitHub Actions workflows](workflow-constraints)
 
 :::
 
@@ -529,15 +529,15 @@ src
   This allows you to invoke the command-line interface using only the project name:
 
   ```console
-  $ poetry run <project>  # during development
-  $ <project>             # after installation
+  poetry run <project>  # during development
+  <project>             # after installation
   ```
 
   The command-line interface can also be invoked
   by specifying a Python interpreter and the package name:
 
   ```console
-  $ python -m <package> [<options>]
+  python -m <package> [<options>]
   ```
 
 `py.typed`
@@ -620,7 +620,7 @@ The documentation files in the `docs` directory are built using [Sphinx] and [My
   It includes the project description from `README.md`.
   This file also defines the navigation menu,
   with links to other documentation pages.
-  The *Changelog* menu entry
+  The _Changelog_ menu entry
   links to the [GitHub Releases][github release] page of your project.
 
 `contributing.md`
@@ -691,13 +691,13 @@ specified in [PEP 517][pep 517] and [518][pep 518]:
 :widths: auto
 
 - - `tool.coverage`
-  - Configuration for [Coverage.py]
+- Configuration for [Coverage.py]
 - - `tool.isort`
-  - Configuration for [isort]
+- Configuration for [isort]
 - - `tool.mypy`
-  - Configuration for [mypy]
+- Configuration for [mypy]
 - - `tool.poetry`
-  - Configuration for [Poetry]
+- Configuration for [Poetry]
 
 :::
 
@@ -834,53 +834,53 @@ See the table below for an overview of the dependencies of generated projects:
 :widths: auto
 
 - - [black]
-  - The uncompromising code formatter.
+- The uncompromising code formatter.
 - - [click]
-  - Composable command line interface toolkit
+- Composable command line interface toolkit
 - - [coverage][coverage.py]
-  - Code coverage measurement for Python
+- Code coverage measurement for Python
 - - [darglint]
-  - A utility for ensuring Google-style docstrings stay up to date with the source code.
+- A utility for ensuring Google-style docstrings stay up to date with the source code.
 - - [flake8]
-  - the modular source code checker: pep8 pyflakes and co
+- the modular source code checker: pep8 pyflakes and co
 - - [flake8-bandit]
-  - Automated security testing with bandit and flake8.
+- Automated security testing with bandit and flake8.
 - - [flake8-bugbear]
-  - A plugin for flake8 finding likely bugs and design problems in your program.
+- A plugin for flake8 finding likely bugs and design problems in your program.
 - - [flake8-docstrings]
-  - Extension for flake8 which uses pydocstyle to check docstrings
+- Extension for flake8 which uses pydocstyle to check docstrings
 - - [flake8-rst-docstrings]
-  - Python docstring reStructuredText (RST) validator
+- Python docstring reStructuredText (RST) validator
 - - [furo]
-  - A clean customisable Sphinx documentation theme.
+- A clean customisable Sphinx documentation theme.
 - - [isort]
-  - A Python utility / library to sort Python imports.
+- A Python utility / library to sort Python imports.
 - - [mypy]
-  - Optional static typing for Python
+- Optional static typing for Python
 - - [pep8-naming]
-  - Check PEP-8 naming conventions, plugin for flake8
+- Check PEP-8 naming conventions, plugin for flake8
 - - [pre-commit]
-  - A framework for managing and maintaining multi-language pre-commit hooks.
+- A framework for managing and maintaining multi-language pre-commit hooks.
 - - [pre-commit-hooks]
-  - Some out-of-the-box hooks for pre-commit.
+- Some out-of-the-box hooks for pre-commit.
 - - [pygments]
-  - Pygments is a syntax highlighting package written in Python.
+- Pygments is a syntax highlighting package written in Python.
 - - [pytest]
-  - pytest: simple powerful testing with Python
+- pytest: simple powerful testing with Python
 - - [pyupgrade]
-  - A tool to automatically upgrade syntax for newer versions.
+- A tool to automatically upgrade syntax for newer versions.
 - - [safety]
-  - Checks installed dependencies for known vulnerabilities.
+- Checks installed dependencies for known vulnerabilities.
 - - [sphinx]
-  - Python documentation generator
+- Python documentation generator
 - - [sphinx-autobuild]
-  - Rebuild Sphinx documentation on changes, with live-reload in the browser.
+- Rebuild Sphinx documentation on changes, with live-reload in the browser.
 - - [sphinx-click]
-  - Sphinx extension that automatically documents click applications
+- Sphinx extension that automatically documents click applications
 - - [typeguard]
-  - Run-time type checker for Python
+- Run-time type checker for Python
 - - [xdoctest]
-  - A rewrite of the builtin doctest module
+- A rewrite of the builtin doctest module
 
 :::
 
@@ -898,14 +898,14 @@ Use the command [poetry show] to
 see the full list of direct and indirect dependencies of your package:
 
 ```console
-$ poetry show
+poetry show
 ```
 
 Use the command [poetry add] to add a dependency for your package:
 
 ```console
-$ poetry add foobar        # for core dependencies
-$ poetry add --dev foobar  # for development dependencies
+poetry add foobar        # for core dependencies
+poetry add --dev foobar  # for development dependencies
 ```
 
 :::{important}
@@ -920,13 +920,13 @@ See [Version constraints](version-constraints) for more details.
 Use the command [poetry remove] to remove a dependency from your package:
 
 ```console
-$ poetry remove foobar
+poetry remove foobar
 ```
 
 Use the command [poetry update] to upgrade the dependency to a new release:
 
 ```console
-$ poetry update foobar
+poetry update foobar
 ```
 
 :::{note}
@@ -956,7 +956,7 @@ into Poetry's virtual environment
 using the command [poetry install].
 
 ```console
-$ poetry install
+poetry install
 ```
 
 This command performs a so-called [editable install] of your package:
@@ -981,10 +981,10 @@ for every Python version supported by your project,
 and easily switch between them:
 
 ```console
-$ poetry env use 3.7
-$ poetry env use 3.8
-$ poetry env use 3.9
-$ poetry env use 3.10
+poetry env use 3.7
+poetry env use 3.8
+poetry env use 3.9
+poetry env use 3.10
 ```
 
 Only one Poetry environment can be active at any time.
@@ -995,19 +995,19 @@ Install your package with `poetry install` into each environment after creating 
 Use the command `poetry env list` to list the available environments:
 
 ```console
-$ poetry env list
+poetry env list
 ```
 
 Use the command `poetry env remove` to remove an environment:
 
 ```console
-$ poetry env remove <version>
+poetry env remove <version>
 ```
 
 Use the command `poetry env info` to show information about the active environment:
 
 ```console
-$ poetry env info
+poetry env info
 ```
 
 ### Running commands
@@ -1016,19 +1016,19 @@ You can run an interactive Python session inside the active environment
 using the command [poetry run]:
 
 ```console
-$ poetry run python
+poetry run python
 ```
 
 The same command allows you to invoke the command-line interface of your project:
 
 ```console
-$ poetry run <project>
+poetry run <project>
 ```
 
 You can also run developer tools, such as [pytest]:
 
 ```console
-$ poetry run pytest
+poetry run pytest
 ```
 
 While it is handy to have developer tools available in the Poetry environment,
@@ -1051,8 +1051,8 @@ from the command line,
 using the following Poetry commands:
 
 ```console
-$ poetry build
-$ poetry publish
+poetry build
+poetry publish
 ```
 
 Building the package is done with the [python build] command,
@@ -1075,9 +1075,9 @@ Once your package is on PyPI,
 others can install it with [pip], [pipx], or Poetry:
 
 ```console
-$ pip install <project>
-$ pipx install <project>
-$ poetry add <project>
+pip install <project>
+pipx install <project>
+poetry add <project>
 ```
 
 While [pip] is the workhorse of the Python packaging ecosystem,
@@ -1126,7 +1126,7 @@ for example the session used to build the documentation.
 If you invoke Nox by itself, it will run the full test suite:
 
 ```console
-$ nox
+nox
 ```
 
 This includes tests, linters, type checks, and more.
@@ -1143,14 +1143,14 @@ You can also run a specific Nox session, using the `--session` option.
 For example, build the documentation like this:
 
 ```console
-$ nox --session=docs
+nox --session=docs
 ```
 
 Print a list of the available Nox sessions
 using the `--list-sessions` option:
 
 ```console
-$ nox --list-sessions
+nox --list-sessions
 ```
 
 Nox creates virtual environments from scratch on each invocation.
@@ -1161,14 +1161,14 @@ For example, the following may be more practical during development
 (this will only run tests and type checks, on the current Python release):
 
 ```console
-$ nox -p 3.10 -rs tests mypy
+nox -p 3.10 -rs tests mypy
 ```
 
 Many sessions accept additional options after `--` separator.
 For example, the following command runs a specific test module:
 
 ```console
-$ nox --session=tests -- tests/test_main.py
+nox --session=tests -- tests/test_main.py
 ```
 
 ### Overview of Nox sessions
@@ -1182,45 +1182,45 @@ The following table gives an overview of the available Nox sessions:
 :widths: auto
 
 - - Session
-  - Description
-  - Python
-  - Default
+- Description
+- Python
+- Default
 - - [coverage](the-coverage-session)
-  - Report coverage with [Coverage.py]
-  - `3.10`
-  - (✓)
+- Report coverage with [Coverage.py]
+- `3.10`
+- (✓)
 - - [docs](the-docs-session)
-  - Build and serve [Sphinx] documentation
-  - `3.10`
-  -
+- Build and serve [Sphinx] documentation
+- `3.10`
+-
 - - [docs-build](the-docs-build-session)
-  - Build [Sphinx] documentation
-  - `3.10`
-  - ✓
+- Build [Sphinx] documentation
+- `3.10`
+- ✓
 - - [mypy](the-mypy-session)
-  - Type-check with [mypy]
-  - `3.7` … `3.10`
-  - ✓
+- Type-check with [mypy]
+- `3.7` … `3.10`
+- ✓
 - - [pre-commit](the-pre-commit-session)
-  - Lint with [pre-commit]
-  - `3.10`
-  - ✓
+- Lint with [pre-commit]
+- `3.10`
+- ✓
 - - [safety](the-safety-session)
-  - Scan dependencies with [Safety]
-  - `3.10`
-  - ✓
+- Scan dependencies with [Safety]
+- `3.10`
+- ✓
 - - [tests](the-tests-session)
-  - Run tests with [pytest]
-  - `3.7` … `3.10`
-  - ✓
+- Run tests with [pytest]
+- `3.7` … `3.10`
+- ✓
 - - [typeguard](the-typeguard-session)
-  - Type-check with [Typeguard]
-  - `3.10`
-  - ✓
+- Type-check with [Typeguard]
+- `3.10`
+- ✓
 - - [xdoctest](the-xdoctest-session)
-  - Run examples with [xdoctest]
-  - `3.7` … `3.10`
-  - ✓
+- Run examples with [xdoctest]
+- `3.7` … `3.10`
+- ✓
 
 :::
 
@@ -1231,7 +1231,7 @@ The following table gives an overview of the available Nox sessions:
 Build the documentation using the Nox session `docs`:
 
 ```console
-$ nox --session=docs
+nox --session=docs
 ```
 
 The docs session runs the command `sphinx-autobuild` to generate the HTML documentation from the Sphinx directory.
@@ -1245,7 +1245,7 @@ Use the `--` separator to pass additional options.
 For example, to treat warnings as errors and run in nit-picky mode:
 
 ```console
-$ nox --session=docs -- -W -n docs docs/_build
+nox --session=docs -- -W -n docs docs/_build
 ```
 
 This Nox session always runs with the current major release of Python.
@@ -1271,7 +1271,7 @@ Learn more about it in the section [Type-checking with mypy](type-checking-with-
 Run mypy using Nox:
 
 ```console
-$ nox --session=mypy
+nox --session=mypy
 ```
 
 You can also run the type checker with a specific Python version.
@@ -1279,14 +1279,14 @@ For example, the following command runs mypy
 using the current stable release of Python:
 
 ```console
-$ nox --session=mypy --python=3.10
+nox --session=mypy --python=3.10
 ```
 
 Use the separator `--` to pass additional options and arguments to `mypy`.
 For example, the following command type-checks only the `__main__` module:
 
 ```console
-$ nox --session=mypy -- src/<package>/__main__.py
+nox --session=mypy -- src/<package>/__main__.py
 ```
 
 (the-pre-commit-session)=
@@ -1299,7 +1299,7 @@ Learn more about it in the section [Linting with pre-commit](linting-with-pre-co
 Run pre-commit from Nox using the `pre-commit` session:
 
 ```console
-$ nox --session=pre-commit
+nox --session=pre-commit
 ```
 
 This session always runs with the current stable release of Python.
@@ -1309,7 +1309,7 @@ For example, the following command installs the pre-commit hooks,
 so they run automatically on every commit you make:
 
 ```console
-$ nox --session=pre-commit -- install
+nox --session=pre-commit -- install
 ```
 
 (the-safety-session)=
@@ -1325,7 +1325,7 @@ for consumption by Safety.
 Run [Safety] using the `safety` session:
 
 ```console
-$ nox --session=safety
+nox --session=safety
 ```
 
 This session always runs with the current stable release of Python.
@@ -1340,7 +1340,7 @@ Learn more about it in the section [The test suite](the-test-suite).
 Run the test suite using the Nox session `tests`:
 
 ```console
-$ nox --session=tests
+nox --session=tests
 ```
 
 The tests session runs the test suite against the installed code.
@@ -1353,14 +1353,14 @@ For example, the following command runs the test suite
 using the current stable release of Python:
 
 ```console
-$ nox --session=tests --python=3.10
+nox --session=tests --python=3.10
 ```
 
 Use the separator `--` to pass additional options to `pytest`.
 For example, the following command runs only the test case `test_main_succeeds`:
 
 ```console
-$ nox --session=tests -- -k test_main_succeeds
+nox --session=tests -- -k test_main_succeeds
 ```
 
 The tests session also installs [pygments], a Python syntax highlighter.
@@ -1391,7 +1391,7 @@ This allows it to combine the coverage data for different Python versions.
 You can also run the session manually:
 
 ```console
-$ nox --session=coverage
+nox --session=coverage
 ```
 
 Use the `--` separator to pass arguments to the `coverage` command.
@@ -1399,7 +1399,7 @@ For example, here's how you would generate an HTML report
 in the `htmlcov` directory:
 
 ```console
-$ nox -rs coverage -- html
+nox -rs coverage -- html
 ```
 
 [Coverage.py] is configured in the `pyproject.toml` file,
@@ -1433,7 +1433,7 @@ against the `Generator` annotation.
 Run [Typeguard] using Nox:
 
 ```console
-$ nox --session=typeguard
+nox --session=typeguard
 ```
 
 The typeguard session runs the test suite with runtime type-checking enabled.
@@ -1446,7 +1446,7 @@ Use the separator `--` to pass additional options and arguments to pytest.
 For example, the following command runs only tests for the `__main__` module:
 
 ```console
-$ nox --session=typeguard -- tests/test_main.py
+nox --session=typeguard -- tests/test_main.py
 ```
 
 :::{note}
@@ -1472,7 +1472,7 @@ This serves multiple purposes:
 Run the tool using the Nox session `xdoctest`:
 
 ```console
-$ nox --session=xdoctest
+nox --session=xdoctest
 ```
 
 You can also run the test suite with a specific Python version.
@@ -1480,7 +1480,7 @@ For example, the following command runs the examples
 using the current stable release of Python:
 
 ```console
-$ nox --session=xdoctest --python=3.10
+nox --session=xdoctest --python=3.10
 ```
 
 By default, the Nox session uses the `all` subcommand to run all examples.
@@ -1488,7 +1488,7 @@ You can also list examples using the `list` subcommand,
 or run specific examples:
 
 ```console
-$ nox --session=xdoctest -- list
+nox --session=xdoctest -- list
 ```
 
 (linting-with-pre-commit)=
@@ -1510,13 +1510,13 @@ for details about the configuration file.
 pre-commit runs in a Nox session every time you invoke `nox`:
 
 ```console
-$ nox
+nox
 ```
 
 Run the pre-commit session explicitly like this:
 
 ```console
-$ nox --session=pre-commit
+nox --session=pre-commit
 ```
 
 The session is described in more detail in the section [The pre-commit session](the-pre-commit-session).
@@ -1531,7 +1531,7 @@ When invoked in this mode, pre-commit only runs on files staged for the commit.
 Install pre-commit as a Git hook by running the following command:
 
 ```console
-$ nox --session=pre-commit -- install
+nox --session=pre-commit -- install
 ```
 
 ### Managing hooks with pre-commit
@@ -1541,7 +1541,7 @@ run in isolated environments managed by pre-commit.
 To upgrade these hooks, use the [autoupdate][pre-commit autoupdate] command:
 
 ```console
-$ nox --session=pre-commit -- autoupdate
+nox --session=pre-commit -- autoupdate
 ```
 
 ### Python-language hooks
@@ -1632,7 +1632,7 @@ For example, consider a linter named `awesome-linter`.
 First, use Poetry to add the linter to your development dependencies:
 
 ```console
-$ poetry add --dev awesome-linter
+poetry add --dev awesome-linter
 ```
 
 Next, update `noxfile.py` to add the linter to the pre-commit session:
@@ -1699,25 +1699,25 @@ The {{ HPC }} comes with a pre-commit configuration consisting of the following 
 :widths: auto
 
 - - [black]
-  - Run the [Black] code formatter
+- Run the [Black] code formatter
 - - [flake8]
-  - Run the [Flake8] linter
+- Run the [Flake8] linter
 - - [isort]
-  - Rewrite source code to sort Python imports
+- Rewrite source code to sort Python imports
 - - [prettier]
-  - Run the [Prettier] code formatter
+- Run the [Prettier] code formatter
 - - [pyupgrade]
-  - Upgrade syntax to newer versions of Python
+- Upgrade syntax to newer versions of Python
 - - [check-added-large-files]
-  - Prevent giant files from being committed
+- Prevent giant files from being committed
 - - [check-toml]
-  - Validate [TOML] files
+- Validate [TOML] files
 - - [check-yaml]
-  - Validate [YAML] files
+- Validate [YAML] files
 - - [end-of-file-fixer]
-  - Ensure files are terminated by a single newline
+- Ensure files are terminated by a single newline
 - - [trailing-whitespace]
-  - Ensure lines do not contain trailing whitespace
+- Ensure lines do not contain trailing whitespace
 
 :::
 
@@ -1801,32 +1801,29 @@ and links to their lists of error codes.
 :widths: auto
 
 - - [pyflakes]
-  - Find invalid Python code
-  - [F][pyflakes codes]
+- Find invalid Python code
+- [F][pyflakes codes]
 - - [pycodestyle]
-  - Enforce style conventions from [PEP 8]
-  - [E,W][pycodestyle codes]
+- Enforce style conventions from [PEP 8]
+- [E,W][pycodestyle codes]
 - - [pep8-naming]
-  - Enforce naming conventions from [PEP 8]
-  - [N][pep8-naming codes]
+- Enforce naming conventions from [PEP 8]
+- [N][pep8-naming codes]
 - - [pydocstyle] / [flake8-docstrings]
-  - Enforce docstring conventions from [PEP 257]
-  - [D][pydocstyle codes]
+- Enforce docstring conventions from [PEP 257]
+- [D][pydocstyle codes]
 - - [flake8-rst-docstrings]
-  - Find invalid [reStructuredText] in docstrings
-  - [RST][flake8-rst-docstrings codes]
+- Find invalid [reStructuredText] in docstrings
+- [RST][flake8-rst-docstrings codes]
 - - [flake8-bugbear]
-  - Detect bugs and design problems
-  - [B][flake8-bugbear codes]
+- Detect bugs and design problems
+- [B][flake8-bugbear codes]
 - - [mccabe]
-  - Limit the code complexity
-  - [C][mccabe codes]
-- - [darglint]
-  - Detect inaccurate docstrings
-  - [DAR][darglint codes]
+- Limit the code complexity
+- [C][mccabe codes]
 - - [Bandit] / [flake8-bandit]
-  - Detect common security issues
-  - [S][bandit codes]
+- Detect common security issues
+- [S][bandit codes]
 
 :::
 
@@ -1934,20 +1931,6 @@ The tool is included with [Flake8].
 [Error codes][mccabe codes] are prefixed by `C` for "complexity".
 
 The {{ HPC }} limits code complexity to a value of 10.
-
-(darglint-integration)=
-
-### darglint
-
-[darglint] checks that docstring descriptions match function definitions.
-The tool has its own configuration file, named `.darglint`.
-
-[Error codes][darglint codes] are prefixed by `DAR` for "darglint".
-
-The {{ HPC }} allows one-line docstrings without function signatures.
-Multi-line docstrings must
-specify the function signatures completely and correctly,
-using [Google docstring style].
 
 ### Bandit
 
@@ -2082,20 +2065,20 @@ It manages the following dependencies:
 :widths: auto
 
 - - Type of dependency
-  - Managed files
-  - See also
+- Managed files
+- See also
 - - Python
-  - `poetry.lock`
-  - [Managing dependencies](managing-dependencies)
+- `poetry.lock`
+- [Managing dependencies](managing-dependencies)
 - - Python
-  - `docs/requirements.txt`
-  - [Read the Docs](read-the-docs-integration)
+- `docs/requirements.txt`
+- [Read the Docs](read-the-docs-integration)
 - - Python
-  - `.github/workflows/constraints.txt`
-  - [Constraints file](workflow-constraints)
+- `.github/workflows/constraints.txt`
+- [Constraints file](workflow-constraints)
 - - GitHub Action
-  - `.github/workflows/*.yml`
-  - [GitHub Actions workflows](github-actions-workflows)
+- `.github/workflows/*.yml`
+- [GitHub Actions workflows](github-actions-workflows)
 
 :::
 
@@ -2120,7 +2103,7 @@ Read the Docs automatically starts building your documentation,
 and will continue to do so when you push to the default branch or make a release.
 Your documentation now has a public URL like this:
 
-> _https://\<project>.readthedocs.io/_
+> _<https://\<project>.readthedocs.io/>_
 
 The configuration for Read the Docs is included in the repository,
 in the file [.readthedocs.yml].
@@ -2177,21 +2160,21 @@ The {{ HPC }} defines the following workflows:
 :widths: auto
 
 - - Workflow
-  - File
-  - Description
-  - Trigger
+- File
+- Description
+- Trigger
 - - [Tests](the-tests-workflow)
-  - `tests.yml`
-  - Run the test suite with [Nox]
-  - Push, PR
+- `tests.yml`
+- Run the test suite with [Nox]
+- Push, PR
 - - [Release](the-release-workflow)
-  - `release.yml`
-  - Upload the package to [PyPI]
-  - Push (default branch)
+- `release.yml`
+- Upload the package to [PyPI]
+- Push (default branch)
 - - [Labeler](the-labeler-workflow)
-  - `labeler.yml`
-  - Manage GitHub project labels
-  - Push (default branch)
+- `labeler.yml`
+- Manage GitHub project labels
+- Push (default branch)
 
 :::
 
@@ -2203,25 +2186,25 @@ Workflows use the following GitHub Actions:
 :widths: auto
 
 - - [actions/cache]
-  - Cache dependencies and build outputs
+- Cache dependencies and build outputs
 - - [actions/checkout]
-  - Check out the Git repository
+- Check out the Git repository
 - - [actions/download-artifact]
-  - Download artifacts from workflows
+- Download artifacts from workflows
 - - [actions/setup-python]
-  - Set up workflows with a specific Python version
+- Set up workflows with a specific Python version
 - - [actions/upload-artifact]
-  - Upload artifacts from workflows
+- Upload artifacts from workflows
 - - [codecov/codecov-action]
-  - Upload coverage to Codecov
+- Upload coverage to Codecov
 - - [crazy-max/ghaction-github-labeler]
-  - Manage labels on GitHub as code
+- Manage labels on GitHub as code
 - - [pypa/gh-action-pypi-publish]
-  - Upload packages to PyPI and TestPyPI
+- Upload packages to PyPI and TestPyPI
 - - [release-drafter/release-drafter]
-  - Draft and publish GitHub Releases
+- Draft and publish GitHub Releases
 - - [salsify/action-detect-and-tag-new-version]
-  - Detect and tag new versions in a repository
+- Detect and tag new versions in a repository
 
 :::
 
@@ -2270,32 +2253,32 @@ as shown in the table below:
 :widths: auto
 
 - - Nox session
-  - Platform
-  - Python versions
+- Platform
+- Python versions
 - - [pre-commit](the-pre-commit-session)
-  - Ubuntu
-  - 3.10
+- Ubuntu
+- 3.10
 - - [safety](the-safety-session)
-  - Ubuntu
-  - 3.10
+- Ubuntu
+- 3.10
 - - [mypy](the-mypy-session)
-  - Ubuntu
-  - 3.10, 3.9, 3.8, 3.7
+- Ubuntu
+- 3.10, 3.9, 3.8, 3.7
 - - [tests](the-tests-session)
-  - Ubuntu
-  - 3.10, 3.9, 3.8, 3.7
+- Ubuntu
+- 3.10, 3.9, 3.8, 3.7
 - - [tests](the-tests-session)
-  - Windows
-  - 3.10
+- Windows
+- 3.10
 - - [tests](the-tests-session)
-  - macOS
-  - 3.10
+- macOS
+- 3.10
 - - [coverage](the-coverage-session)
-  - Ubuntu
-  - 3.10
+- Ubuntu
+- 3.10
 - - [docs-build](the-docs-build-session)
-  - Ubuntu
-  - 3.10
+- Ubuntu
+- 3.10
 
 :::
 
@@ -2343,9 +2326,9 @@ The tokens need to be stored as secrets in the repository settings on GitHub:
 :widths: auto
 
 - - `PYPI_TOKEN`
-  - [PyPI] API token
+- [PyPI] API token
 - - `TEST_PYPI_TOKEN`
-  - [TestPyPI] API token
+- [TestPyPI] API token
 
 :::
 
@@ -2412,7 +2395,7 @@ First, make sure you have all the [requirements](installation) installed.
 Run the test suite using [Nox](using-Nox):
 
 ```console
-$ nox -r
+nox -r
 ```
 
 ### How to run your code
@@ -2420,19 +2403,19 @@ $ nox -r
 First, install the project and its dependencies to the Poetry environment:
 
 ```console
-$ poetry install
+poetry install
 ```
 
 Run an interactive session in the environment:
 
 ```console
-$ poetry run python
+poetry run python
 ```
 
 Invoke the command-line interface of your package:
 
 ```console
-$ poetry run <project>
+poetry run <project>
 ```
 
 ### How to make code changes
@@ -2452,20 +2435,20 @@ $ poetry run <project>
 Create a branch for your changes:
 
 ```console
-$ git switch --create my-topic-branch main
+git switch --create my-topic-branch main
 ```
 
 Create a series of small, single-purpose commits:
 
 ```console
-$ git add <files>
-$ git commit
+git add <files>
+git commit
 ```
 
 Push your branch to GitHub:
 
 ```console
-$ git push --set-upstream origin my-topic-branch
+git push --set-upstream origin my-topic-branch
 ```
 
 The push triggers the following automated steps:
@@ -2506,16 +2489,16 @@ In your local repository,
 update the main branch:
 
 ```console
-$ git switch main
-$ git pull origin main
+git switch main
+git pull origin main
 ```
 
 Optionally, remove the merged topic branch
 from the local repository as well:
 
 ```console
-$ git remote prune origin
-$ git branch --delete --force my-topic-branch
+git remote prune origin
+git branch --delete --force my-topic-branch
 ```
 
 The original commits remain accessible from the pull request
@@ -2535,10 +2518,10 @@ It is recommended to do this in a separate pull request:
 The individual steps for bumping the version are:
 
 ```console
-$ git switch --create release main
-$ poetry version <version>
-$ git commit --message="<project> <version>" pyproject.toml
-$ git push origin release
+git switch --create release main
+poetry version <version>
+git commit --message="<project> <version>" pyproject.toml
+git push origin release
 ```
 
 If you're not sure which version number to choose,
@@ -2562,25 +2545,12 @@ This workflow performs the following automated steps:
 
 [Read the Docs] automatically builds a new stable version of the documentation.
 
-## The Hypermodern Python blog
-
-The project setup is described in detail in the [Hypermodern Python] article series:
-
-- [Chapter 1: Setup][hypermodern python chapter 1]
-- [Chapter 2: Testing][hypermodern python chapter 2]
-- [Chapter 3: Linting][hypermodern python chapter 3]
-- [Chapter 4: Typing][hypermodern python chapter 4]
-- [Chapter 5: Documentation][hypermodern python chapter 5]
-- [Chapter 6: CI/CD][hypermodern python chapter 6]
-
-You can also read the articles on [this blog][hypermodern python blog].
-
 [--reuse-existing-virtualenvs]: https://nox.thea.codes/en/stable/usage.html#re-using-virtualenvs
 [.gitattributes]: https://git-scm.com/book/en/Customizing-Git-Git-Attributes
 [.github/dependabot.yml]: https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates
 [.gitignore]: https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring
 [.readthedocs.yml]: https://docs.readthedocs.io/en/stable/config-file/v2.html
-[2022.6.3]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/releases/tag/2022.6.3
+[2022.6.3]: https://github.com/bernardcooke53/cookiecutter-hyperhypermodern-python/releases/tag/2022.6.3
 [__main__]: https://docs.python.org/3/library/__main__.html
 [abstract syntax tree]: https://docs.python.org/3/library/ast.html
 [actions/cache]: https://github.com/actions/cache
@@ -2613,7 +2583,6 @@ You can also read the articles on [this blog][hypermodern python blog].
 [cupper]: https://github.com/senseyeio/cupper
 [curl]: https://curl.haxx.se
 [cyclomatic complexity]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
-[darglint codes]: https://github.com/terrencepreilly/darglint#error-codes
 [darglint]: https://github.com/terrencepreilly/darglint
 [dependabot docs]: https://docs.github.com/en/github/administering-a-repository/keeping-your-dependencies-updated-automatically
 [dependabot issue 4435]: https://github.com/dependabot/dependabot-core/issues/4435
@@ -2643,15 +2612,6 @@ You can also read the articles on [this blog][hypermodern python blog].
 [github renaming]: https://github.com/github/renaming
 [github]: https://github.com/
 [google docstring style]: https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings
-[hypermodern python blog]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
-[hypermodern python chapter 1]: https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769
-[hypermodern python chapter 2]: https://medium.com/@cjolowicz/hypermodern-python-2-testing-ae907a920260
-[hypermodern python chapter 3]: https://medium.com/@cjolowicz/hypermodern-python-3-linting-e2f15708da80
-[hypermodern python chapter 4]: https://medium.com/@cjolowicz/hypermodern-python-4-typing-31bcf12314ff
-[hypermodern python chapter 5]: https://medium.com/@cjolowicz/hypermodern-python-5-documentation-13219991028c
-[hypermodern python chapter 6]: https://medium.com/@cjolowicz/hypermodern-python-6-ci-cd-b233accfa2f6
-[hypermodern python cookiecutter]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
-[hypermodern python]: https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769
 [import hook]: https://docs.python.org/3/reference/import.html#import-hooks
 [install-poetry.py]: https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py
 [isort black profile]: https://pycqa.github.io/isort/docs/configuration/black_compatibility.html

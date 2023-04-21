@@ -1,12 +1,12 @@
 """Nox sessions."""
-from pathlib import Path
 import shutil
+from pathlib import Path
 
 import nox
 from nox.sessions import Session
 
 nox.options.sessions = ["docs"]
-owner, repository = "cjolowicz", "cookiecutter-hypermodern-python"
+owner, repository = "bernardcooke53", "cookiecutter-hyperhypermodern-python"
 labels = "cookiecutter", "documentation"
 bump_paths = "README.md", "docs/guide.rst", "docs/index.rst", "docs/quickstart.md"
 
@@ -59,7 +59,14 @@ def docs(session: Session) -> None:
 @nox.session
 def linkcheck(session: Session) -> None:
     """Build the documentation."""
-    args = session.posargs or ["-b", "linkcheck", "-W", "--keep-going", "docs", "docs/_build"]
+    args = session.posargs or [
+        "-b",
+        "linkcheck",
+        "-W",
+        "--keep-going",
+        "docs",
+        "docs/_build",
+    ]
 
     builddir = Path("docs", "_build")
     if builddir.exists():

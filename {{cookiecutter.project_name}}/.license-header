@@ -1,0 +1,4 @@
+Copyright © {{ cookiecutter.copyright_year }} {{ cookiecutter.author }}. All rights reserved.
+
+The full license associated with this software is available in the LICENSE file at
+the root of this Git repository.
